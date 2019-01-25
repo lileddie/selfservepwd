@@ -59,3 +59,11 @@ If a user is locked out, or doesn't know their password, a member of the admin t
 ![alt admin-screenshot](https://raw.githubusercontent.com/lileddie/selfservepwd/master/admin-passwdmgr.png)
 
 The Unlock Account button will reset the user's password to a static password as defined in /opt/passwdmgr/deets.py line 5.
+
+## Authors
+
+* **Troy Schmid**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
