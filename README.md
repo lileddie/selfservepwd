@@ -23,7 +23,7 @@ yum -y install python34-setuptools
 sudo easy_install-3.4 pip
 pip3 install requirements.txt
 pip install requirements-2.7.txt
-rm -f requirements* README.md .git
+rm -f requirements* README.md .git passwdmgr.png admin-passwdmgr.png
 yum -y install httpd
 systemctl enable httpd
 mv passwdmgt.conf /var/httpd/config.d/
@@ -52,10 +52,10 @@ systemctl start httpd
 
 Once you have created a DNS record for the domain name you chose in the apache config file, you should be able to navigate to the page using HTTPS and your active directory credentials:
 
-![alt screenshot](https://raw.githubusercontent.com/lileddie/windows-password-manager/master/images/passwdmgr.png)
+![alt screenshot](https://raw.githubusercontent.com/lileddie/selfservepwd/master/images/passwdmgr.png)
 
 If a user is locked out, or doesn't know their password, a member of the admin team (as defined in line 74 and 75 of file /etc/httpd/conf.d/passwdmgr.conf) can login to the admin site:
 
-![alt admin-screenshot](https://raw.githubusercontent.com/lileddie/windows-password-manager/master/images/admin-passwdmgr.png)
+![alt admin-screenshot](https://raw.githubusercontent.com/lileddie/selfservepwd/master/images/admin-passwdmgr.png)
 
 The Unlock Account button will reset the user's password to a static password as defined in /opt/passwdmgr/deets.py line 5.
