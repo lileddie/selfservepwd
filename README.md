@@ -23,7 +23,7 @@ yum -y install python34-setuptools
 sudo easy_install-3.4 pip
 pip3 install requirements.txt
 pip install requirements-2.7.txt
-rm -f requirements* README.md .git passwdmgr.png admin-passwdmgr.png
+rm -f requirements* README.md .git passwdmgr.png admin-passwdmgr.png LICENSE.md
 yum -y install httpd
 systemctl enable httpd
 mv passwdmgt.conf /var/httpd/config.d/
