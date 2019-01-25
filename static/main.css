@@ -1,0 +1,77 @@
+html, body {
+  height:100%;
+  margin: 0;
+}
+.container-admin {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: black;
+  overflow:hidden;
+  text-align: right;
+}
+.container-admin button {
+  width: 70px;
+  height:30px;
+  margin: 3px;
+  background-color: #999900;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  overflow:hidden;
+  text-align: center;
+  background: url('../static/maxresdefault.jpg');
+}
+.container h1 {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  margin-top: 80px;
+}
+.container form {
+  margin: 30px;
+}
+.container input {
+  width: 350px;
+  height: 15px;
+  font-size: 15px;
+  margin: 2px;
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.container button {
+  width: 70px;
+  height:30px;
+  margin: 3px;
+}
+.container p {
+  margin: 50px;
+}
+table {
+    width: 50%;
+    margin: 100px auto;
+}
+
+th {
+    height: 50px;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+thead {
+    background-color: #999900;
+    color: white;
+    align: center;
+}
+button {
+  width: 70px;
+  height:30px;
+  margin: 3px;
+  background-color: #999900;
+}

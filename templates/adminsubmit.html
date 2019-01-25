@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>AD Self Service Password Reset Tool Results</title>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/ico" href="../static/favicon.ico">
+    <link href="../static/main.css" rel="stylesheet">
+    <title>AD Self Service Password Reset Tool Results</title>
+  </head>
+    <body>
+      <div class="container">
+        <p>The result of the password reset attempt is {{ result }} <br>
+          <form action="{{url_for('admin')}}" method="GET">
+            <button type="view"> Back </button>
+          </form>
+        </p>
+      </div>
+    </body>
+</html>
