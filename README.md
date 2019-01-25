@@ -23,7 +23,7 @@ yum -y install python34-setuptools
 sudo easy_install-3.4 pip
 pip3 install requirements.txt
 pip install requirements-2.7.txt
-rm -f requirements* README.md .git passwdmgr.png admin-passwdmgr.png LICENSE.md
+rm -f requirements* README.md .git passwdmgr.png admin-passwdmgr.png LICENSE.md newSchedJob.ps1 pwdNeverExpires.ps1
 yum -y install httpd
 systemctl enable httpd
 mv passwdmgt.conf /var/httpd/config.d/
@@ -59,6 +59,22 @@ If a user is locked out, or doesn't know their password, a member of the admin t
 ![alt admin-screenshot](https://raw.githubusercontent.com/lileddie/selfservepwd/master/admin-passwdmgr.png)
 
 The Unlock Account button will reset the user's password to a static password as defined in /opt/passwdmgr/deets.py line 5.
+
+## Issues With Python AD script
+
+In our implementation we found that when either unlocking or modifying a users' password the "Password Never Expires" flag was being unset on the AD server.  Being unable to find a way to set this with python, the easiest way was to create a weekly powershell script to set accounts to never expire.
+
+Copy the two powershell scripts (newSchedJob.ps1 and pwdNeverExpires.ps1) to your AD server in folder C: > Username > scripts (Create a new folder if necessary)
+
+Change line 2 in newSchedJob.ps1 subsituting your-Server-Hostname with the hostname or IP of the AD server you are logged in to.
+Change line 2 of pwdNeverExpires.ps1 with the OU group and domain name used for your implementation of AD.
+
+With Powershell ISE open the newSchedJob.ps1 and run it.  It should create your Job and you can view it from the Task Scheduler under Microsoft > Windows > PowerShell > ScheduledJobs
+
+## Acknoledgement
+
+My friend, stackoverflow
+Chrissy LeMaire's [awesome article on created schedule tasks using powershell.](https://blog.netnerds.net/2015/01/create-scheduled-task-or-scheduled-job-to-indefinitely-run-a-powershell-script-every-5-minutes/)
 
 ## Authors
 
